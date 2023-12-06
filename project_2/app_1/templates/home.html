@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Home</h1>
+    {% if data %}
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">ID</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date of birth</th>
+            <th scope="col">Age</th>
+            <th scope="col">Time</th>
+            <th scope="col">Joining year</th>
+            <th scope="col">Weight</th>
+            <th scope="col">About you</th>
+            <th scope="col">Website</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Video duration</th>
+            <th scope="col">Agree</th>
+          </tr>
+        </thead>
+        {% for i in data%}
+        <tbody>
+            <tr>
+              <td>{{i.Name}}</td>
+              <td>{{i.Id}}</td>
+              <td>{{i.Email}}</td>
+              <td>{{i.Date_of_birth}}</td>
+              <td>{{i.Age}}</td>
+              <td>{{i.Time}}</td>
+              <td>{{i.Joining_Year}}</td>
+              <td>{{i.Weight}}</td>
+              <td>{{i.About_you}}</td>
+              <td>{{i.Your_websie_link}}</td>
+              <td>{{i.Upload_your_photo}}</td>
+              <td>{{i.Video_duration}}</td>
+              <td>{{i.Agree}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+    {% else %}
+      <h3>No data available</h3>
+    {% endif %}
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
